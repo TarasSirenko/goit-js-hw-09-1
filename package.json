@@ -1,25 +1,24 @@
 {
-  "name": "parcel-project-template",
+  "name": "timers-promises",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://tarassirenko.github.io/goit-js-hw-09-1",
+  "homepage": "https://goitacademy.github.io/goit-js-hw-09-new-program",
   "scripts": {
-    "start": "parcel src/*.html --no-source-maps --open",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-09-1/ --no-source-maps --no-minify"
+    "start": "parcel src/*.html --open",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-09-new-program/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TarasSirenko/goit-js-hw-09-1.git"
+    "url": "git+https://github.com/TarasSirenko/goit-js-hw-09-new-program.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Taras Sirenko <tsrassirenko71@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TarasSirenko/goit-js-hw-09-1.git"
+    "url": "https://github.com/TarasSirenko/goit-js-hw-09-new-program.git"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0",
-    "parcel-plugin-handlebars-precompile": "^1.0.2"
+    "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
