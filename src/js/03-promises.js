@@ -1,49 +1,49 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'notiflix/dist/notiflix-3.2.5.min.css';
 
-// const refs = {
-//   firstDelayInput: document.querySelector('[name="delay"]'),
-//   stepDelayInput: document.querySelector('[name="step"]'),
-//   amountPromises: document.querySelector('[name="amount"]'),
-//   form: document.querySelector('.form'),
-// };
+const refs = {
+  firstDelayInput: document.querySelector('[name="delay"]'),
+  stepDelayInput: document.querySelector('[name="step"]'),
+  amountPromises: document.querySelector('[name="amount"]'),
+  form: document.querySelector('.form'),
+};
 
-// refs.form.addEventListener('submit', OnSubmitForm);
+refs.form.addEventListener('submit', OnSubmitForm);
 
-// function OnSubmitForm(event) {
-//   event.preventDefault();
-//   const firstDelay = parseInt(event.srcElement[0].value);
-//   const stepDelay = parseInt(event.srcElement[1].value);
-//   const amountPromises = parseInt(event.srcElement[2].value);
-//   renderPromisesOnSubmitForm(firstDelay, stepDelay, amountPromises);
-// }
+function OnSubmitForm(event) {
+  event.preventDefault();
+  const firstDelay = parseInt(event.srcElement[0].value);
+  const stepDelay = parseInt(event.srcElement[1].value);
+  const amountPromises = parseInt(event.srcElement[2].value);
+  renderPromisesOnSubmitForm(firstDelay, stepDelay, amountPromises);
+}
 
-// function renderPromisesOnSubmitForm(delay, stepDelay, amountPromises) {
-//   let position = 0;
-//   for (let i = 0; i < amountPromises; i++) {
-//     delay += stepDelay;
-//     position += 1;
-//     createPromise(position, delay)
-//       .then(({ position, delay }) => {
-//         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
-//       })
-//       .catch(({ position, delay }) => {
-//         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
-//       });
-//   }
-// }
+function renderPromisesOnSubmitForm(delay, stepDelay, amountPromises) {
+  let position = 0;
+  for (let i = 0; i < amountPromises; i++) {
+    delay += stepDelay;
+    position += 1;
+    createPromise(position, delay)
+      .then(({ position, delay }) => {
+        Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+      })
+      .catch(({ position, delay }) => {
+        Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+      });
+  }
+}
 
-// function createPromise(position, delay) {
-//   const shouldResolve = Math.random() > 0.3;
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       if (shouldResolve) {
-//         resolve({ position, delay });
-//       }
-//       reject({ position, delay });
-//     }, delay);
-//   });
-// }
+function createPromise(position, delay) {
+  const shouldResolve = Math.random() > 0.3;
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldResolve) {
+        resolve({ position, delay });
+      }
+      reject({ position, delay });
+    }, delay);
+  });
+}
 
 //  Задачи со старой программы ---------------------
 //  задача 1
