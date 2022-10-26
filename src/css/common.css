@@ -56,10 +56,14 @@ color: black;
 
 /* timer --------------------------------- */
 
+.input-container {
+  display: flex;
+  justify-content: center;
+}
 .timer {
   display: flex;
+  margin: 0px auto;
   margin-top: 40px;
-  margin-left: 40px;
   width: 400px;
   justify-content: space-between;
 }
@@ -70,4 +74,12 @@ color: black;
 }
 .value {
   font-size: 40px;
+}
+#datetime-picker {
+  width: 310px;
+  height: 30px;
+  margin-right: 20px;
+}
+[data-btn="stop"] {
+  background-color: red;
 }
